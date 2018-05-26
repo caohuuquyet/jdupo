@@ -1,0 +1,52 @@
+# usage policy management 1.0
+
+########################################
+# symbols used
+# ------------
+# [>>] Fact
+# [->] Strict rule
+# [=>] Defeasible rule
+# [~>] Defeater
+# [>] Superiority
+# [==] Mode conversion
+# [!=] Mode conflict
+#
+# [-] negation
+#
+# [==] mode conversion
+# [!=] mode conflict
+########################################
+
+# Facts: commercial operators (CO), the data owners (DO), municipal authorities (MA).
+>> CO(X)
+>> DO(X)
+>> MA(X)
+
+# For the data owners (DO), they have the permission to full access of all the details.
+rd1: DO(X) =>[P] TemporalScope(X,any)
+rd2: DO(X) =>[P] SpatialScope(X,any)
+rd3: DO(X) =>[P] AggregateScope(X,any)
+rd4: DO(X) =>[P] PurposeScope(X,any)
+
+# For municipal authorities (MA), they have permission to access available average occupancy of parking places (aggregation) per street on an hourly basis.
+rm1: MA(X) =>[P] SpatialScope(X,street)
+rm2: MA(X) =>[F] -SpatialScope(X,street)
+rm3: MA(X) =>[P] TemporalScope(X,hourly)
+rm4: MA(X) =>[F] -TemporalScope(X,hourly)
+rm5: MA(X) =>[P] AggregateScope(X,average)
+rm6: MA(X) =>[F] -AggregateScope(X,average)
+
+# For commercial operators (CO), only statistical data will be made available over a zone and on a weekly basis.
+rc1: CO(X) =>[P] SpatialScope(X,zone)
+rc2: CO(X) =>[F] -SpatialScope(X,zone)
+rc3: CO(X) =>[P] TemporalScope(X,weekly)
+rc4: CO(X) =>[F] -TemporalScope(X,weekly)
+rc5: CO(X) =>[P] AggregateScope(X,statistic)
+rc6: CO(X) =>[F] -AggregateScope(X,statistic)
+
+# We have a consumers request that a commercial operator (CO) requests all the detail of the parking data over a street on a hourly basis.
+request: MA(X),[P]SpatialScope(X,street),[P]TemporalScope(X,hourly),[P]AggregateScope(X,average) =>[O] ConsumerRequest(X)
+
+#request:CO(X), [P]SpatialScope(X,street),[P]TemporalScope(X,hourly), [P]AggregateScope(X,detail) =>[O] ConsumerRequest(X)
+
+# Can we have the conlusions for ConsumerRequest?

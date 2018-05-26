@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_151"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/interprolog.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/org.eclipse.core.commands_3.6.0.I20100512-1500.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/org.eclipse.equinox.common_3.6.0.v20100503.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/org.eclipse.jface_3.6.1.M20100825-0800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/org.eclipse.osgi_3.6.1.R36x_v20100806.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/org.eclipse.swt.win32.win32.x86_3.6.1.v3655c.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/org.eclipse.swt_3.6.1.v3655c.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/org.eclipse.ui.workbench_3.6.1.M20100826-1330.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/swt.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/jena/jena-arq-2.9.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/jena/jena-core-2.7.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/jena/jena-iri-0.9.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/jena/jena-sesame.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/jena/jena-tdb-0.9.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/jena/log4j-1.2.13.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/jena/slf4j-api-1.5.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/jena/slf4j-log4j12-1.5.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/jena/stax-api-1.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/jena/virt_jena2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/jena/virtjdbc4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/jena/wstx-asl-3.2.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qcaohuu/OneDrive/jDUPO/lib/jena/xercesImpl-2.7.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

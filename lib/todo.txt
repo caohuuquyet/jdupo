@@ -1,0 +1,95 @@
+http://localhost:8890/aarhus_parking.ttl#
+
+prefix tl: <http://purl.org/NET/c4dm/timeline.owl#>
+prefix sao: <http://iot.ee.surrey.ac.uk/citypulse/resources/ontologies/sao.ttl#> 
+prefix ct: <http://www.insight-centre.org/citytraffic#> 
+
+SELECT ?observation ?value ?observationTime 
+WHERE {
+?observation a sao:Point .
+?observation sao:value ?value .
+?observation sao:time ?time .
+?time tl:at ?observationTime .
+}
+
+prefix tl: <http://purl.org/NET/c4dm/timeline.owl#>
+prefix sao: <http://iot.ee.surrey.ac.uk/citypulse/resources/ontologies/sao.ttl#> 
+prefix ct: <http://www.insight-centre.org/citytraffic#> 
+
+SELECT DISTINCT  ?latitude ?longitude
+WHERE {
+?observation a sao:FeatureOfInterest .
+
+?observation ct:hasFirstNode ?v.
+
+?v ct:hasLatitude ?latitude .
+
+?v ct:hasLongitude ?longitude .
+
+}
+
+prefix tl: <http://purl.org/NET/c4dm/timeline.owl#>
+prefix sao: <http://iot.ee.surrey.ac.uk/citypulse/resources/ontologies/sao.ttl#> 
+prefix ct: <http://www.insight-centre.org/citytraffic#> 
+prefix ns1: <http://purl.oclc.org/NET/ssnx/ssn#> 
+
+SELECT ?latitude ?longitude (xsd:integer(?m) as ?sum)
+WHERE {
+	?observation sao:value ?m .
+	?observation ns1:featureOfInterest ?fi .
+	?fi a sao:FeatureOfInterest .
+	?fi ct:hasFirstNode ?v.
+	?v ct:hasLatitude ?latitude .
+	?v ct:hasLongitude ?longitude .
+}
+ORDER BY ?latitude
+
+prefix tl: <http://purl.org/NET/c4dm/timeline.owl#>
+prefix sao: <http://iot.ee.surrey.ac.uk/citypulse/resources/ontologies/sao.ttl#>
+prefix ct: <http://www.insight-centre.org/citytraffic#>
+prefix ns1: <http://purl.oclc.org/NET/ssnx/ssn#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?latitude ?longitude ?time (sum(xsd:integer(?m)) as ?sum)
+	WHERE {
+	?observation sao:value ?m .
+	?observation sao:time ?t .
+	?t tl:at ?time1. 
+	bind(MONTH(?time1) as ?time). 
+	?observation ns1:featureOfInterest ?fi .
+	?fi a sao:FeatureOfInterest .
+	?fi ct:hasFirstNode ?v .
+	?v ct:hasLatitude ?latitude .
+	?v ct:hasLongitude ?longitude . 
+	} 
+	GROUP BY ?latitude ?longitude ?time 
+	ORDER BY ?latitude ?time 
+	
+	prefix tl: <http://purl.org/NET/c4dm/timeline.owl#>
+prefix sao: <http://iot.ee.surrey.ac.uk/citypulse/resources/ontologies/sao.ttl#>
+prefix ct: <http://www.insight-centre.org/citytraffic#>
+prefix ns1: <http://purl.oclc.org/NET/ssnx/ssn#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?latitude ?longitude ?time (AVG(xsd:integer(?m)) as ?sum) 
+	WHERE {
+	?observation sao:value ?m .
+	?observation sao:time ?t .
+	?t tl:at ?time1. 
+	bind(CONCAT(STR(year(?time1)), 
+                     "-", 
+                     STR(month(?time1)), 
+                     "-", 
+                    STR(day(?time1)), 
+":",  STR(hours(?time1))) as ?time). 
+	?observation ns1:featureOfInterest ?fi .
+	?fi a sao:FeatureOfInterest .
+	?fi ct:hasFirstNode ?v .
+	?v ct:hasLatitude ?latitude .
+	?v ct:hasLongitude ?longitude . 
+	} 
+GROUP BY ?latitude ?longitude ?time
+ORDER BY ?latitude ?time 
+
+
+

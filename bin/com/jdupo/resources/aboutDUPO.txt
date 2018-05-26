@@ -1,0 +1,10 @@
+jDUPO (version 1.0)                                       
+Copyright (C) 2015.
+
+jDUPO is freely distributed under the terms of the FSF Lesser GNU Public License (LGPL).
+
+You are welcome to use with ABSOLUTELY NO WARRANTY. 
+         
+Third-party software used
+-------------------------
+SPINdle Defeasible Logic Theory Editor   (version 2.2.2).    

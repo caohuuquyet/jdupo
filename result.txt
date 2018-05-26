@@ -1,0 +1,3 @@
+query=defeasibly(acceptable(X,Y,Z,W))
+%(apartment,price,size,gardensize)
+result=[a3,350,65,0,a5,350,55,15,a7,375,65,12]
