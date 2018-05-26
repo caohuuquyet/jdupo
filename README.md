@@ -8,9 +8,13 @@
 ## Install Eclipse
 * https://www.eclipse.org/downloads/packages/release/neon/3
 
-## Open jDUPO
+## Run jDUPO
 * Eclipse -> File -> Open Projects from File System -> Import source -> Finish
 * Build Path -> Configure Build Path -> Java Build Path -> Libraries -> Add external JARs
-	`<jDUPO source code folder> / lib`
-	`<jDUPO source code folder> / lib/ jena`
+	`<jDUPO source code folder> / lib` and `<jDUPO source code folder> / lib/ jena`
 * SRC -> com.dupo.Editor -> Run
+
+## Test Data
+* Data Provider -> Load Usage Policy -> `<jDUPO source code folder> / samples / dupo.dfl` or `<jDUPO source code folder> / samples / dupo2.dfl`
+* Data Usage Control Module -> Process Comsumer Request
+
