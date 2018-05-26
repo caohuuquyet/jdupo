@@ -9,16 +9,8 @@
 * https://www.eclipse.org/downloads/packages/release/neon/3
 
 ## Open jDUPO
-* Eclipse -> File -> Open Projects from File System ...
-      Import source: <jDUPO source code folder>
-	  Finish
-* Configure Build Path ...
-      Right click on the project
-	  Build Path -> Configure Build Path ...
-	  Java Build Path
-	  Libraries
-	  Add external JARs
-	  <jDUPO source code folder> / lib
-	  <jDUPO source code folder> / lib/ jena
-* Run 
-      src -> com.dupo.Editor
+* Eclipse -> File -> Open Projects from File System -> Import source -> Finish
+* Build Path -> Configure Build Path -> Java Build Path -> Libraries -> Add external JARs
+	`<jDUPO source code folder> / lib`
+	`<jDUPO source code folder> / lib/ jena`
+* SRC -> com.dupo.Editor -> Run
