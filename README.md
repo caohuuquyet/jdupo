@@ -12,7 +12,7 @@
 * Eclipse -> File -> Open Projects from File System -> Import source -> Finish
 * Build Path -> Configure Build Path -> Java Build Path -> Libraries -> Add external JARs
 	`<jDUPO source code folder> / lib` and `<jDUPO source code folder> / lib/ jena`
-* SRC -> com.dupo.Editor -> Run
+* SRC -> com.jdupo.Editor -> Run
 
 ## Test Data
 * Data Provider -> Load Usage Policy -> `<jDUPO source code folder> / samples / dupo.dfl` or `<jDUPO source code folder> / samples / dupo2.dfl`
