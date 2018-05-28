@@ -1,6 +1,7 @@
 # jDUPO Install
 ## Checkout Source Code
-*  `git clone git@github.com:caohuuquyet/jdupo.git`
+*  `git clone git@github.com:caohuuquyet/jdupo.git` 
+* or download at https://github.com/caohuuquyet/jdupo/archive/master.zip
 
 ## Install JDK 32 bit 
 * http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-windows-i586.exe
